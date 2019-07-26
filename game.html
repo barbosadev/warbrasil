@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+
+<canvas id="myCanvas" width="10000" height="10000"
+style="border:1px solid #000000;">
+</canvas>
+
+<script>
+
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.moveTo(0.8*100,7.8*100);
+    ctx.lineTo(1.5*100,8.1*100);
+    ctx.lineTo(2.8*100,8.4*100);
+    ctx.lineTo(3.9*100,9.0*100);
+    ctx.lineTo(5.1*100,9.5*100);
+    ctx.lineTo(3.9*100,10.3*100);
+    ctx.lineTo(2.7*100,10.2*100);
+    ctx.lineTo(2.7*100,9.2*100);
+    ctx.lineTo(1.8*100,9.6*100);
+    ctx.lineTo(1.2*100,9.2*100);
+    ctx.lineTo(0.8*100,7.8*100);
+    ctx.fillStyle = "red";
+    ctx.stroke();
+    
+window.addEventListener('keydown', KeyDown, true);
+    document.getElementById("myCanvas").addEventListener('click', KeyDown, true);
+
+    function KeyDown(evt){
+   
+   var canvas = document.getElementById("myCanvas");
+
+   // posição dos cliques descontando a distância da borda da janela
+   var posX = evt.clientX - canvas.offsetLeft;
+   var posY = evt.clientY - canvas.offsetTop;
+
+   console.clear();
+   console.log("Posição do clique: ", posX+","+posY);
+
+}
+
+
+
+
+    </script>
+
+
+</body>
+</html>
