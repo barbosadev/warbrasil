@@ -1,0 +1,18 @@
+Peças
+ - Ao inicio de cada turno, o jogador ganhará 1 peça de soldado.
+ - Quando conquistar regiões, o jogador receberá a cada inicio de turno 1 peça + o bônus da região conquistada.
+Regiões
+ - Sudeste - 3 Estados - Ao completar a região, receba 3 peças p/turno.
+ - Norte - 7 estados - Ao completar, receba 4 peças p/turno.
+ - Sul - 3 estados - Ao completar, receba 2 peças p/turno.
+ - Nordeste - 9 estados - Ao completar, receba 5 peças p/turno.
+ - Centro-Oeste - 3 estados - Ao completar, receba 2 peças p/turno.
+ - Distrito Federal - 1 estado - Ao completar, receba 3 peças p/turno.
+
+Objetivos - Ganha o jogador que completar primeiro o objetivo que recebeu randomicamente.
+ - Conquiste Sul, Sudeste e + 1 região a sua escolha.
+ - Conquiste Nordeste, Norte e + 1 região a sua escolha.
+ - Conquiste Centro-Oeste e o Norte.
+ - Tenha 50 peças no DF.
+ - Destrua o oponente.
+ - Domine todos os portos e tenha pelo menos 15 tropas em cada.
