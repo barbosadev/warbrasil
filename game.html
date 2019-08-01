@@ -76,10 +76,26 @@ style="border:1px solid #000000;">
         ctx.stroke();
     }
 
+    //RIO DE JANEIRO
+	function drawRJ() {
+        ctx.moveTo(4.7*100,4.4*100);
+        ctx.lineTo(5.1*100,4.6*100);
+        ctx.lineTo(5.3*100,4.1*100);
+        ctx.lineTo(5.2*100,4.0*100);
+        ctx.lineTo(5.0*100,4.2*100);
+        ctx.lineTo(4.8*100,4.3*100);
+        ctx.lineTo(4.7*100,4.4*100);
+        ctx.fillStyle = "#70DC00";
+        ctx.fill();
+        ctx.strokeStyle = "#003300";
+        ctx.lineWidth = 3;
+        ctx.stroke();
+    }
+
 	drawSP();
 	drawRS();
 	drawSC();
-	
+	drawRJ();
     window.addEventListener('keydown', KeyDown, true);
     document.getElementById("myCanvas").addEventListener('click', KeyDown, true);
 
