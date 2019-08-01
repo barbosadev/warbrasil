@@ -216,6 +216,34 @@ style="border:1px solid #000000;">
         ctx.stroke();
     }
 
+    //Mato Grosso
+    function drawMT(){
+        ctx.beginPath();
+        ctx.moveTo(3.2*100,3.6*100);
+        ctx.lineTo(3.6*100,3.3*100);
+        ctx.lineTo(3.7*100,3.1*100);
+        ctx.lineTo(3.7*100,2.8*100);
+        ctx.lineTo(3.8*100,2.4*100);
+        ctx.lineTo(2.7*100,2.3*100);
+        ctx.lineTo(2.7*100,2.2*100);
+        ctx.lineTo(2.1*100,2.2*100);
+        ctx.lineTo(2.0*100,2.5*100);
+        ctx.lineTo(2.3*100,2.6*100);
+        ctx.lineTo(2.3*100,2.8*100);
+        ctx.lineTo(2.2*100,3.0*100);
+        ctx.lineTo(2.2*100,3.4*100);
+        ctx.lineTo(2.5*100,3.4*100);
+        ctx.lineTo(2.7*100,3.7*100);
+        ctx.lineTo(2.9*100,3.5*100);
+        ctx.lineTo(3.1*100,3.6*100);
+        ctx.lineTo(3.2*100,3.6*100);
+        ctx.fillStyle = "#FFD500";
+        ctx.fill();
+        ctx.strokeStyle = "#003300";
+        ctx.lineWidth = 3;
+        ctx.stroke();
+    }
+
 
     drawSP();
     drawRS();
@@ -226,6 +254,7 @@ style="border:1px solid #000000;">
     drawES();
     drawMG();
     drawGO();
+    drawMT();
 	
     window.addEventListener('keydown', KeyDown, true);
     document.getElementById("myCanvas").addEventListener('click', KeyDown, true);
