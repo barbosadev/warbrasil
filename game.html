@@ -24,7 +24,7 @@ style="border:1px solid #000000;">
         ctx.lineTo(4.1*100,4.1*100);
         ctx.lineTo(4.0*100,4.0*100);
         ctx.lineTo(3.7*100,4.0*100);
-        ctx.lineTo(3.4*100,4.4*100);
+        ctx.lineTo(3.4*100,4.36*100);
         ctx.lineTo(3.9*100,4.5*100);
         ctx.lineTo(4.0*100,4.7*100);
         ctx.lineTo(4.2*100,4.7*100);
@@ -37,7 +37,7 @@ style="border:1px solid #000000;">
 	
 	//RIO GRANDE DO SUL
 	function drawRS(){
-    	ctx.moveTo(3.3*100,5.0*100);
+    	ctx.moveTo(3.2*100,5.0*100);
         ctx.lineTo(3.6*100,5.1*100);
         ctx.lineTo(3.8*100,5.3*100);
 		ctx.lineTo(3.9*100,5.4*100);
@@ -48,7 +48,7 @@ style="border:1px solid #000000;">
 		ctx.lineTo(3.1*100,5.8*100);
 		ctx.lineTo(2.9*100,5.8*100);
 		ctx.lineTo(2.7*100,5.6*100);
-    	ctx.lineTo(3.3*100,5.0*100);
+    	ctx.lineTo(3.2*100,5.0*100);
 		ctx.fillStyle = "#70DC00";
 		ctx.fill();
         ctx.strokeStyle = "#003300";
@@ -58,16 +58,16 @@ style="border:1px solid #000000;">
 	
 	//SANTA CATARINA
 	function drawSC() {
-        ctx.moveTo(3.94*100,5.45*100);
-        ctx.lineTo(4.10*100,5.32*100);
-        ctx.lineTo(4.11*100,4.94*100);
-        ctx.lineTo(3.81*100,4.90*100);
-        ctx.lineTo(3.66*100,5.02*100);
-        ctx.lineTo(3.28*100,4.95*100);
-        ctx.lineTo(3.26*100,5.06*100);
-		ctx.lineTo(3.62*100,5.13*100);
-        ctx.lineTo(3.85*100,5.32*100);
-        ctx.lineTo(3.94*100,5.45*100);
+        ctx.moveTo(3.9*100,5.4*100);
+        ctx.lineTo(4.1*100,5.3*100);
+        ctx.lineTo(4.1*100,4.9*100);
+        ctx.lineTo(3.8*100,4.9*100);
+        ctx.lineTo(3.6*100,5.0*100);
+        ctx.lineTo(3.2*100,4.9*100);
+        ctx.lineTo(3.2*100,5.0*100);
+		ctx.lineTo(3.6*100,5.1*100);
+        ctx.lineTo(3.8*100,5.3*100);
+        ctx.lineTo(3.9*100,5.4*100);
         ctx.fillStyle = "#70DC00";
         ctx.fill();
         ctx.strokeStyle = "#003300";
@@ -110,12 +110,31 @@ style="border:1px solid #000000;">
     	ctx.lineWidth = 3;
         ctx.stroke();
 	}
+    //PARANÁ
+    function drawPR(){
+        ctx.moveTo(3.2*100,4.9*100);
+        ctx.lineTo(3.1*100,4.8*100);
+		ctx.lineTo(3.2*100,4.6*100);
+        ctx.lineTo(3.4*100,4.36*100);
+        ctx.lineTo(3.9*100,4.5*100);
+        ctx.lineTo(4.0*100,4.7*100);
+        ctx.lineTo(4.2*100,4.7*100);
+        ctx.lineTo(4.1*100,4.9*100);
+        ctx.lineTo(3.8*100,4.9*100);
+        ctx.lineTo(3.6*100,5.0*100);
+		ctx.fillStyle = "#70DC00";
+		ctx.fill();
+        ctx.strokeStyle = "#003300";
+    	ctx.lineWidth = 3;
+        ctx.stroke();
+	}
 	
 	drawSP();
 	drawRS();
 	drawSC();
 	drawRJ();
 	drawMS();
+	drawPR();
     
     window.addEventListener('keydown', KeyDown, true);
     document.getElementById("myCanvas").addEventListener('click', KeyDown, true);
