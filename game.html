@@ -91,11 +91,32 @@ style="border:1px solid #000000;">
         ctx.lineWidth = 3;
         ctx.stroke();
     }
-
+    
+	//MATO GROSSO DO SUL
+	function drawMS(){
+    	ctx.moveTo(2.7*100,3.7*100);
+        ctx.lineTo(2.9*100,3.5*100);
+        ctx.lineTo(3.1*100,3.6*100);
+		ctx.lineTo(3.2*100,3.6*100);
+        ctx.lineTo(3.7*100,3.9*100);
+		ctx.lineTo(3.7*100,4.0*100);
+    	ctx.lineTo(3.2*100,4.6*100);
+		ctx.lineTo(3.0*100,4.6*100);
+		ctx.lineTo(2.9*100,4.4*100);
+		ctx.lineTo(2.6*100,4.3*100);
+    	ctx.lineTo(2.7*100,3.7*100);
+		ctx.fillStyle = "#70DC00";
+		ctx.fill();
+        ctx.strokeStyle = "#003300";
+    	ctx.lineWidth = 3;
+        ctx.stroke();
+	}
+	
 	drawSP();
 	drawRS();
 	drawSC();
 	drawRJ();
+	drawMS();
     
     window.addEventListener('keydown', KeyDown, true);
     document.getElementById("myCanvas").addEventListener('click', KeyDown, true);
