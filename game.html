@@ -135,12 +135,29 @@ style="border:1px solid #000000;">
         ctx.stroke();
 	}
 	
+	//ESPÍRITO SANTO
+    function drawES(){
+	    ctx.beginPath();
+        ctx.moveTo(5.3*100,4.2*100);
+        ctx.lineTo(5.5*100,4.0*100);
+		ctx.lineTo(5.5*100,3.8*100);
+        ctx.lineTo(5.4*100,3.7*100);
+        ctx.lineTo(5.2*100,4.0*100);
+        ctx.lineTo(5.3*100,4.2*100);
+		ctx.fillStyle = "#FF0000";
+		ctx.fill();
+        ctx.strokeStyle = "#003300";
+    	ctx.lineWidth = 3;
+        ctx.stroke();
+	}
+	
 	drawSP();
 	drawRS();
 	drawSC();
 	drawRJ();
 	drawMS();
 	drawPR();
+	drawES();
     
     window.addEventListener('keydown', KeyDown, true);
     document.getElementById("myCanvas").addEventListener('click', KeyDown, true);
