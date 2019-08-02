@@ -16,6 +16,7 @@ style="border:1px solid #000000;">
 
     var pathRS = new Path2D();
     var pathSC = new Path2D();
+    var pathPR = new Path2D();
 
     function drawRS() {
         pathRS.moveTo(3.2*100,5.0*100);
@@ -59,23 +60,23 @@ style="border:1px solid #000000;">
 
     //PARANA
     function drawPR() {
-        ctx.beginPath();
-        ctx.moveTo(3.2*100,4.9*100);
-        ctx.lineTo(3.1*100,4.8*100);
-        ctx.lineTo(3.2*100,4.6*100);
-        ctx.lineTo(3.4*100,4.36*100);
-        ctx.lineTo(3.9*100,4.5*100);
-        ctx.lineTo(4.0*100,4.7*100);
-        ctx.lineTo(4.2*100,4.7*100);
-        ctx.lineTo(4.1*100,4.9*100);
-        ctx.lineTo(3.8*100,4.9*100);
-        ctx.lineTo(3.6*100,5.0*100);
-        ctx.lineTo(3.2*100,4.9*100);
+        pathPR.moveTo(3.2*100,4.9*100);
+        pathPR.lineTo(3.1*100,4.8*100);
+        pathPR.lineTo(3.2*100,4.6*100);
+        pathPR.lineTo(3.4*100,4.36*100);
+        pathPR.lineTo(3.9*100,4.5*100);
+        pathPR.lineTo(4.0*100,4.7*100);
+        pathPR.lineTo(4.2*100,4.7*100);
+        pathPR.lineTo(4.1*100,4.9*100);
+        pathPR.lineTo(3.8*100,4.9*100);
+        pathPR.lineTo(3.6*100,5.0*100);
+        pathPR.lineTo(3.2*100,4.9*100);
+        pathPR.closePath();
         ctx.fillStyle = "#FF9A00";
-        ctx.fill();
+        ctx.fill(pathPR);
         ctx.strokeStyle = "#003300";
         ctx.lineWidth = 3;
-        ctx.stroke();
+        ctx.stroke(pathPR);
     }
 
     //SAO PAULO
@@ -426,6 +427,9 @@ style="border:1px solid #000000;">
 
        if (ctx.isPointInPath(pathSC, posX, posY))
            console.log("SC");
+
+       if (ctx.isPointInPath(pathPR, posX, posY))
+         console.log("PR");
     }
 
 </script>
