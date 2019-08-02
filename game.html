@@ -304,6 +304,43 @@ style="border:1px solid #000000;">
         ctx.stroke();
     }
 
+    //BAHIA
+    function drawBA() {
+        ctx.beginPath();
+        ctx.moveTo(5.9* 100,2.7* 100);
+        ctx.lineTo(5.8* 100,2.9* 100);
+        ctx.lineTo(5.6* 100,2.9* 100);
+        ctx.lineTo(5.6* 100,2.7* 100);
+        ctx.lineTo(5.9* 100,3.1* 100);
+        ctx.lineTo(5.5* 100,3.8* 100);
+        ctx.lineTo(5.4* 100,3.7* 100);
+        ctx.lineTo(5.4* 100,3.6* 100);
+        ctx.lineTo(5.4* 100,3.5* 100);
+        ctx.lineTo(5.5* 100,3.4* 100);
+        ctx.lineTo(5.2* 100,3.4* 100);
+        ctx.lineTo(5.1* 100,5.3* 100);
+        ctx.lineTo(5.0* 100,3.2* 100);
+        ctx.lineTo(4.8* 100,3.1* 100);
+        ctx.lineTo(4.7* 100,3.1* 100);
+        ctx.lineTo(4.5* 100,3.3* 100);
+        ctx.lineTo(4.5* 100,2.5* 100);
+        ctx.lineTo(4.6* 100,2.6* 100);
+        ctx.lineTo(4.7* 100,2.5* 100);
+        ctx.lineTo(4.8* 100,2.4* 100);
+        ctx.lineTo(4.9* 100,2.3* 100);
+        ctx.lineTo(5.0* 100,2.3* 100);
+        ctx.lineTo(5.2* 100,2.3* 100);
+        ctx.lineTo(5.3* 100,2.4* 100);
+        ctx.lineTo(5.5* 100,2.3* 100);
+        ctx.lineTo(5.8* 100,2.4* 100);
+        ctx.fillStyle = "#0099FF";
+        ctx.fill();
+        ctx.strokeStyle = "#003300";
+        ctx.lineWidth = 3;
+        ctx.stroke();
+    }
+
+
     drawSP();
     drawRS();
     drawSC();
@@ -317,6 +354,7 @@ style="border:1px solid #000000;">
     drawRO();
 	drawSE();
 	drawAL();
+    drawBA();
 
     window.addEventListener('keydown', KeyDown, true);
     document.getElementById("myCanvas").addEventListener('click', KeyDown, true);
