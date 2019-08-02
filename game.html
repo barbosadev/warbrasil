@@ -13,7 +13,7 @@ style="border:1px solid #000000;">
 
     var canvas = document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
-    
+
     //SÃO PAULO
     function drawSP(){
         ctx.beginPath();
@@ -34,7 +34,7 @@ style="border:1px solid #000000;">
         ctx.lineWidth = 3;
         ctx.stroke();
     }
-    
+
     //RIO GRANDE DO SUL
     function drawRS(){
         ctx.beginPath();
@@ -56,7 +56,7 @@ style="border:1px solid #000000;">
         ctx.lineWidth = 3;
         ctx.stroke();
     }
-    
+
     //SANTA CATARINA
     function drawSC() {
         ctx.beginPath();
@@ -93,7 +93,7 @@ style="border:1px solid #000000;">
         ctx.lineWidth = 3;
         ctx.stroke();
     }
-    
+
     //MATO GROSSO DO SUL
     function drawMS(){
         ctx.beginPath();
@@ -134,7 +134,7 @@ style="border:1px solid #000000;">
         ctx.lineWidth = 3;
         ctx.stroke();
     }
-    
+
     //ESPÍRITO SANTO
     function drawES(){
         ctx.beginPath();
@@ -150,7 +150,7 @@ style="border:1px solid #000000;">
         ctx.lineWidth = 3;
         ctx.stroke();
     }
-    
+
     //MINAS GERAIS
     function drawMG(){
         ctx.beginPath();
@@ -186,7 +186,7 @@ style="border:1px solid #000000;">
         ctx.lineWidth = 3;
         ctx.stroke();
     }
-    
+
     //GOIAS
     function drawGO(){
         ctx.beginPath();
@@ -243,50 +243,34 @@ style="border:1px solid #000000;">
         ctx.lineWidth = 3;
         ctx.stroke();
     }
+    //Roraima
+    function drawRO()
+    {
+        ctx.beginPath();
+        ctx.moveTo(2.5 * 100, 0.7 * 100);
+        ctx.lineTo(2.3 * 100, 0.6 * 100);
+        ctx.lineTo(2.3 * 100, 0.5 * 100);
+        ctx.lineTo(2.4 * 100, 0.3 * 100);
+        ctx.lineTo(2.3 * 100, 0.1 * 100);
+        ctx.lineTo(2.1 * 100, 0.1 * 100);
+        ctx.lineTo(2.0 * 100, 0.3 * 100);
+        ctx.lineTo(1.6 * 100, 0.3 * 100);
+        ctx.lineTo(1.6 * 100, 0.6 * 100);
+        ctx.lineTo(1.8 * 100, 0.7 * 100);
+        ctx.lineTo(1.9 * 100, 0.8 * 100);
+        ctx.lineTo(1.9 * 100, 1.0 * 100);
+        ctx.lineTo(2.0 * 100, 1.1 * 100);
+        ctx.lineTo(2.2 * 100, 1.0 * 100);
+        ctx.lineTo(2.4 * 100, 1.0 * 100);
+        ctx.lineTo(2.5 * 100, 1.0 * 100);
+        ctx.lineTo(2.5 * 100, 0.7 * 100);
+        ctx.fillStyle = "#72DC00";
+        ctx.fill();
+        ctx.strokeStyle = "#003300";
+        ctx.lineWidth = 3;
+        ctx.stroke();
+    }
 
-	//ALAGOAS
-    function drawAL() {
-        ctx.beginPath();
-        ctx.moveTo(5.8*100,2.4*100);
-        ctx.lineTo(5.8*100,2.3*100);
-		ctx.lineTo(5.9*100,2.4*100);
-		ctx.lineTo(6.2*100,2.3*100);
-		ctx.lineTo(6.0*100,2.5*100);
-		ctx.lineTo(5.8*100,2.4*100);
-        ctx.fillStyle = "#0099FF";
-        ctx.fill();
-        ctx.strokeStyle = "#003300";
-        ctx.lineWidth = 3;
-        ctx.stroke();
-    }
-	
-	//SERGIPE
-    function drawSE() {
-        ctx.beginPath();
-        ctx.moveTo(5.9*100,2.7*100);
-		ctx.lineTo(6.0*100,2.5*100);
-		ctx.lineTo(5.8*100,2.4*100);
-		ctx.lineTo(5.8*100,2.5*100);
-		ctx.lineTo(5.7*100,2.7*100);
-        ctx.lineTo(5.9*100,2.7*100);
-        ctx.fillStyle = "#0099FF";
-        ctx.fill();
-        ctx.strokeStyle = "#003300";
-        ctx.lineWidth = 3;
-        ctx.stroke();
-    }
-	
-	//PERNAMBUCO
-    function drawPE() {
-        ctx.beginPath();
-        
-        ctx.fillStyle = "#0099FF";
-        ctx.fill();
-        ctx.strokeStyle = "#003300";
-        ctx.lineWidth = 3;
-        ctx.stroke();
-    }
-	
     drawSP();
     drawRS();
     drawSC();
@@ -300,7 +284,7 @@ style="border:1px solid #000000;">
 	drawSE();
 	drawAL();
 	drawPE();
-	
+
 
     window.addEventListener('keydown', KeyDown, true);
     document.getElementById("myCanvas").addEventListener('click', KeyDown, true);
