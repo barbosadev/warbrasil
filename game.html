@@ -18,7 +18,7 @@ style="border:1px solid #000000;">
     var pathSC = new Path2D();
     var pathPR = new Path2D();
 
-    function drawRS() {
+    function drawRS(execEvent) {
         pathRS.moveTo(3.2*100,5.0*100);
         pathRS.lineTo(3.6*100,5.1*100);
         pathRS.lineTo(3.8*100,5.3*100);
@@ -32,14 +32,20 @@ style="border:1px solid #000000;">
         pathRS.lineTo(2.7*100,5.6*100);
         pathRS.lineTo(3.2*100,5.0*100);
         pathRS.closePath();
-        ctx.fillStyle = "#FF9A00";
-        ctx.fill(pathRS);
-        ctx.strokeStyle = "#003300";
+        if (execEvent == "onLoad") {
+          ctx.fillStyle = "#FF9A00";
+          ctx.fill(pathRS);
+          ctx.strokeStyle = "#003300";
+        }
+        else if (execEvent == "mouseOver")
+          ctx.strokeStyle = "#C0C0C0";
+        else if (execEvent == "mouseLeft")
+          ctx.strokeStyle = "#003300";
         ctx.lineWidth = 3;
         ctx.stroke(pathRS);
     }
 
-    function drawSC() {
+    function drawSC(execEvent) {
         pathSC.moveTo(3.9*100,5.4*100);
         pathSC.lineTo(4.1*100,5.3*100);
         pathSC.lineTo(4.1*100,4.9*100);
@@ -51,15 +57,21 @@ style="border:1px solid #000000;">
         pathSC.lineTo(3.8*100,5.3*100);
         pathSC.lineTo(3.9*100,5.4*100);
         pathSC.closePath();
-        ctx.fillStyle = "#FF9A00";
-        ctx.fill(pathSC);
-        ctx.strokeStyle = "#003300";
+        if (execEvent == "onLoad") {
+          ctx.fillStyle = "#FF9A00";
+          ctx.fill(pathSC);
+          ctx.strokeStyle = "#003300";
+        }
+        else if (execEvent == "mouseOver")
+          ctx.strokeStyle = "#C0C0C0";
+        else if (execEvent == "mouseLeft")
+          ctx.strokeStyle = "#003300";
         ctx.lineWidth = 3;
         ctx.stroke(pathSC);
     }
 
     //PARANA
-    function drawPR() {
+    function drawPR(execEvent) {
         pathPR.moveTo(3.2*100,4.9*100);
         pathPR.lineTo(3.1*100,4.8*100);
         pathPR.lineTo(3.2*100,4.6*100);
@@ -72,9 +84,15 @@ style="border:1px solid #000000;">
         pathPR.lineTo(3.6*100,5.0*100);
         pathPR.lineTo(3.2*100,4.9*100);
         pathPR.closePath();
-        ctx.fillStyle = "#FF9A00";
-        ctx.fill(pathPR);
-        ctx.strokeStyle = "#003300";
+        if (execEvent == "onLoad") {
+          ctx.fillStyle = "#FF9A00";
+          ctx.fill(pathPR);
+          ctx.strokeStyle = "#003300";
+        }
+        else if (execEvent == "mouseOver")
+          ctx.strokeStyle = "#C0C0C0";
+        else if (execEvent == "mouseLeft")
+          ctx.strokeStyle = "#003300";
         ctx.lineWidth = 3;
         ctx.stroke(pathPR);
     }
@@ -395,9 +413,9 @@ style="border:1px solid #000000;">
         ctx.lineWidth = 3;
         ctx.stroke();
     }
-    drawRS();
-    drawSC();
-    drawPR();
+    drawRS("onLoad");
+    drawSC("onLoad");
+    drawPR("onLoad");
     drawSP();
     drawMG();
     drawRJ();
@@ -412,24 +430,60 @@ style="border:1px solid #000000;">
     drawAM();
     drawRO();
 
-    window.addEventListener('keydown', KeyDown, true);
-    document.getElementById("myCanvas").addEventListener('click', KeyDown, true);
+    //window.addEventListener('keydown', KeyDown, true);
+    canvas.addEventListener('click', CanvasClick, true);
+    canvas.addEventListener('mousemove', OverCanvas, true);
+    canvas.addEventListener('mouseover', OverCanvas, true);
 
-    function KeyDown(evt){
+    function ClearMouse() {
+      drawRS("mouseLeft");
+      drawSC("mouseLeft");
+      drawPR("mouseLeft");
+    }
+
+    function OverCanvas(evt) {
+      var posX = evt.clientX - canvas.offsetLeft;
+      var posY = evt.clientY - canvas.offsetTop;
+
+      switch (true) {
+        case ctx.isPointInPath(pathRS, posX, posY):
+          ClearMouse();
+          drawRS("mouseOver");
+          canvas.style.cursor = "pointer";
+          break;
+        case ctx.isPointInPath(pathSC, posX, posY):
+          ClearMouse();
+          drawSC("mouseOver");
+          canvas.style.cursor = "pointer";
+          break;
+        case ctx.isPointInPath(pathPR, posX, posY):
+          ClearMouse();
+          drawPR("mouseOver");
+          canvas.style.cursor = "pointer";
+          break;
+        default:
+          ClearMouse();
+          canvas.style.cursor = "default";
+      }
+  }
+
+    function CanvasClick(evt){
        console.clear();
-        // posição dos cliques descontando a distância da borda da janela
+       // posição dos cliques descontando a distância da borda da janela
        var posX = evt.clientX - canvas.offsetLeft;
        var posY = evt.clientY - canvas.offsetTop;
        console.log("Posição do clique: ", posX+","+posY);
-
-       if (ctx.isPointInPath(pathRS, posX, posY))
-         console.log("RS");
-
-       if (ctx.isPointInPath(pathSC, posX, posY))
-           console.log("SC");
-
-       if (ctx.isPointInPath(pathPR, posX, posY))
-         console.log("PR");
+       switch (true) {
+         case ctx.isPointInPath(pathRS, posX, posY):
+           alert("RS");
+           break;
+         case ctx.isPointInPath(pathSC, posX, posY):
+           alert("SC");
+           break;
+        case ctx.isPointInPath(pathPR, posX, posY):
+          alert("PR");
+          break;
+       }
     }
 
 </script>
