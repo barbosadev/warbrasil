@@ -583,6 +583,36 @@ style="border:1px solid #000000;">
         ctx.stroke();
     }
 
+    //MARANHÃO
+    function drawMA() {
+        ctx.beginPath();
+        ctx.moveTo(4.5 * 100, 1 * 100);
+        ctx.lineTo(4.75 * 100, 1.25 * 100);
+        ctx.lineTo(4.75 * 100, 1.36 * 100);
+        ctx.lineTo(4.88 * 100, 1.27 * 100);
+        ctx.lineTo(5.12 * 100, 1.36 * 100);
+        ctx.lineTo(5 * 100, 1.53 * 100);
+        ctx.lineTo(5 * 100, 1.78 * 100);
+        ctx.lineTo(4.9 * 100, 1.87 * 100);
+        ctx.lineTo(4.98 * 100, 1.97 * 100);
+        ctx.lineTo(4.81 * 100, 2.01 * 100);
+        ctx.lineTo(4.62 * 100, 2.12 * 100);
+        ctx.lineTo(4.54 * 100, 2.26 * 100);
+        ctx.lineTo(4.5 * 100, 2.53 * 100);
+        ctx.lineTo(4.3 * 100, 2.3 * 100);
+        ctx.lineTo(4.3 * 100, 2.2 * 100);
+        ctx.lineTo(4.4 * 100, 2.1 * 100);
+        ctx.lineTo(4.2 * 100, 2.1 * 100);
+        ctx.lineTo(4.28 * 100, 1.81 * 100);
+        ctx.lineTo(4.11 * 100, 1.71 * 100);
+        ctx.lineTo(4.3 * 100, 1.5 * 100);
+        ctx.lineTo(4.50 * 100, 1 * 100);
+        ctx.fillStyle = "#0099FF";
+        ctx.fill();
+        ctx.strokeStyle = "#003300";
+        ctx.lineWidth = 3;
+        ctx.stroke();
+    }
 
     drawRS("onLoad");
     drawSC("onLoad");
@@ -597,7 +627,7 @@ style="border:1px solid #000000;">
     drawBA();
     drawSE();
     drawAL();
-	drawPB();
+	  drawPB();
     drawPE();
     drawAM();
     drawRR();
@@ -606,6 +636,7 @@ style="border:1px solid #000000;">
     drawAC();
     drawPA();
     drawAP();
+    drawMA();
 
     //window.addEventListener('keydown', KeyDown, true);
     canvas.addEventListener('click', CanvasClick, true);
