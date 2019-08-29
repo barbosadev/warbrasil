@@ -540,6 +540,27 @@ style="border:1px solid #000000;">
         ctx.stroke();
     }
 
+    //AMAPÁ
+    function drawAP() {
+        ctx.beginPath();
+        ctx.moveTo(3.63 * 100, 0.21 * 100);
+        ctx.lineTo(3.75 * 100, 0.46 * 100);
+        ctx.lineTo(3.75 * 100, 0.63 * 100);
+        ctx.lineTo(3.9 * 100, 0.63 * 100);
+        ctx.lineTo(3.95 * 100, 0.75 * 100);
+        ctx.lineTo(3.68 * 100, 1.0 * 100);
+        ctx.lineTo(3.67 * 100, 1.1 * 100);
+        ctx.lineTo(3.5 * 100, 1.19 * 100);
+        ctx.lineTo(3.2 * 100, 0.67 * 100);
+        ctx.lineTo(3.40 * 100, 0.56 * 100);
+        ctx.lineTo(3.43 * 100, 0.38 * 100);
+        ctx.lineTo(3.63 * 100, 0.21 * 100);
+        ctx.fillStyle = "#72DC00";
+        ctx.fill();
+        ctx.strokeStyle = "#003300";
+        ctx.lineWidth = 3;
+        ctx.stroke();
+    }
 
 
     drawRS("onLoad");
@@ -562,6 +583,7 @@ style="border:1px solid #000000;">
     drawRO();
     drawAC();
     drawPA();
+    drawAP();
 
     //window.addEventListener('keydown', KeyDown, true);
     canvas.addEventListener('click', CanvasClick, true);
