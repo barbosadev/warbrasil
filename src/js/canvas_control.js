@@ -679,15 +679,16 @@ function treatEvent(evt, path, fillStyle) {
     if (evt == "onLoad") {
         ctx.fillStyle = fillStyle;
         ctx.fill(path);
+        ctx.lineWidth = 3;
         ctx.strokeStyle = "#003300";
     } else if (evt == "mouseOver") {
         clearMouse();
-        ctx.strokeStyle = "#C0C0C0";
+        ctx.lineWidth = 4;
+        ctx.strokeStyle = "#aeffff";
         canvas.style.cursor = "pointer";
     }
     else if (evt == "mouseLeft")
-        ctx.strokeStyle = "#003300";
-    ctx.lineWidth = 3;
+        treatEvent("onLoad", path, fillStyle)
     ctx.stroke(path);
 }
 
