@@ -188,7 +188,6 @@ function drawGO(execEvent) {
     pathGO.lineTo(4.4 * 100, 2.8 * 100);
     pathGO.lineTo(4.2 * 100, 2.9 * 100);
     pathGO.lineTo(4.1 * 100, 2.9 * 100);
-    pathGO.lineTo(4.0 * 100, 2.8 * 100);
     pathGO.lineTo(3.9 * 100, 2.9 * 100);
     pathGO.lineTo(3.7 * 100, 2.8 * 100);
     pathGO.lineTo(3.7 * 100, 3.1 * 100);
@@ -211,6 +210,7 @@ function drawMT(execEvent) {
     pathMT.lineTo(2.1 * 100, 2.5 * 100);
     pathMT.lineTo(2.2 * 100, 2.6 * 100);
     pathMT.lineTo(2.2 * 100, 2.6 * 100);
+    pathMT.lineTo(2.3 * 100, 2.6 * 100);
     pathMT.lineTo(2.3 * 100, 2.8 * 100);
     pathMT.lineTo(2.2 * 100, 3.0 * 100);
     pathMT.lineTo(2.2 * 100, 3.4 * 100);
