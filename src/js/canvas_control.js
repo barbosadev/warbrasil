@@ -1,9 +1,8 @@
-var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
-
 var pathRS = new Path2D();
 var pathSC = new Path2D();
 var pathPR = new Path2D();
+var ctx = ""
+var canvas = ""
 
 function drawRS(execEvent) {
     pathRS.moveTo(3.2 * 100, 5.0 * 100);
@@ -670,38 +669,6 @@ function drawRN() {
     ctx.stroke();
 }
 
-drawRS("onLoad");
-drawSC("onLoad");
-drawPR("onLoad");
-drawSP();
-drawMG();
-drawRJ();
-drawES();
-drawMS();
-drawGO();
-drawMT();
-drawBA();
-drawSE();
-drawAL();
-drawPB();
-drawPE();
-drawAM();
-drawRR();
-drawTO();
-drawRO();
-drawAC();
-drawPA();
-drawAP();
-drawMA();
-drawPI();
-drawCE();
-drawRN();
-
-//window.addEventListener('keydown', KeyDown, true);
-canvas.addEventListener('click', CanvasClick, true);
-canvas.addEventListener('mousemove', OverCanvas, true);
-canvas.addEventListener('mouseover', OverCanvas, true);
-
 function ClearMouse() {
     drawRS("mouseLeft");
     drawSC("mouseLeft");
@@ -752,3 +719,37 @@ function CanvasClick(evt) {
             break;
     }
 }
+
+window.onload = function(){
+    canvas = document.getElementById("myCanvas");
+    ctx = canvas.getContext("2d");
+    canvas.addEventListener('click', CanvasClick, true);
+    canvas.addEventListener('mousemove', OverCanvas, true);
+    canvas.addEventListener('mouseover', OverCanvas, true);
+    drawRS("onLoad");
+    drawSC("onLoad");
+    drawPR("onLoad");
+    drawSP();
+    drawMG();
+    drawRJ();
+    drawES();
+    drawMS();
+    drawGO();
+    drawMT();
+    drawBA();
+    drawSE();
+    drawAL();
+    drawPB();
+    drawPE();
+    drawAM();
+    drawRR();
+    drawTO();
+    drawRO();
+    drawAC();
+    drawPA();
+    drawAP();
+    drawMA();
+    drawPI();
+    drawCE();
+    drawRN();
+};
