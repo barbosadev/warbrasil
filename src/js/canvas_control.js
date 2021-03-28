@@ -2,6 +2,7 @@ var canvas = ctx = pathRS = pathSC = pathPR = pathSP = pathMG = pathRJ = pathES 
 var statesDrawFunctionDict = {"RS":drawRS, "SC":drawSC, "PR":drawPR, "SP":drawSP, "MG":drawMG, "RJ":drawRJ, "ES":drawES, "MS":drawMS, "GO":drawGO, "MT":drawMT, "BA":drawBA, "SE":drawSE, "AL":drawAL, "PB":drawPB, "PE":drawPE, "AM":drawAM, "RR":drawRR, "TO":drawTO, "RO":drawRO, "AC":drawAC, "PA":drawPA, "AP":drawAP, "MA":drawMA, "PI":drawPI, "CE":drawCE, "RN":drawRN}
 var statesFillStyleDict = {"NORTE":"#72DC00", "NORDESTE":"#0099FF", "CENTRO-OESTE":"#FFD500", "SUDESTE":"#FF0000", "SUL":"#FF9A00"}
 var statesStrokeStyleDict = {"AM": "#aeffff","PA":"#aeffff","AC":"#aeffff","RJ":"#aeffff","SP":"#aeffff","MG": "#aeffff", "ES":"#aeffff","CE":"#aeffff","BA":"#aeffff","PE":"#aeffff","MA":"#aeffff","RN":"#aeffff","PB":"#aeffff","AL":"#aeffff","SE":"#aeffff","PI":"#aeffff","RO":"#aeffff","RR":"#aeffff","AP":"#aeffff","MT":"#aebbff","MS":"#aebbff","GO":"#aebbff","TO":"#aeffff","PR":"#aebbff","SC":"#aebbff","RS":"#aebbff",}
+
 //RIO GRANDE DO SUL
 function drawRS(execEvent) {
     pathRS = new Path2D()
@@ -449,7 +450,9 @@ function drawPA(execEvent) {
     pathPA.lineTo(4.3 * 100, 1.5 * 100);
     pathPA.lineTo(4.5 * 100, 1.0 * 100);
     pathPA.lineTo(4.2 * 100, 0.9 * 100);
-    pathPA.lineTo(4.0 * 100, 1.19 * 100);
+    pathPA.lineTo(3.9*100, 0.8*100);
+    pathPA.lineTo(3.68*100, 1*100);
+    pathPA.lineTo(3.67*100, 1.1*100);
     pathPA.lineTo(3.5 * 100, 1.19 * 100);
     pathPA.lineTo(3.1 * 100, 0.5 * 100);
     pathPA.lineTo(2.5 * 100, 0.7 * 100);
@@ -460,13 +463,6 @@ function drawPA(execEvent) {
     pathPA.lineTo(2.6 * 100, 2.0 * 100);
     pathPA.lineTo(2.7 * 100, 2.2 * 100);
     pathPA.lineTo(2.7 * 100, 2.3 * 100);
-    pathPA.moveTo(4.0 * 100, 1.0 * 100);
-    pathPA.lineTo(4.0 * 100, 1.08 * 100);
-    pathPA.lineTo(3.95 * 100, 1.14 * 100);
-    pathPA.lineTo(3.80 * 100, 1.14 * 100);
-    pathPA.lineTo(3.74 * 100, 1.08 * 100);
-    pathPA.lineTo(3.84 * 100, 0.95 * 100);
-    pathPA.lineTo(4.0 * 100, 1.0 * 100);
     pathPA.closePath()
     treatEvent(execEvent, pathPA, statesFillStyleDict["NORTE"], statesStrokeStyleDict["PA"])
 }
