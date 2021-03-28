@@ -1,7 +1,7 @@
 var canvas = ctx = pathRS = pathSC = pathPR = pathSP = pathMG = pathRJ = pathES = pathMS = pathGO = pathMT = pathBA = pathSE = pathAL = pathPB = pathPE = pathAM = pathRR = pathTO = pathRO = pathAC = pathPA = pathAP = pathMA = pathPI = pathCE = pathRN = null
 var statesDrawFunctionDict = {"RS":drawRS, "SC":drawSC, "PR":drawPR, "SP":drawSP, "MG":drawMG, "RJ":drawRJ, "ES":drawES, "MS":drawMS, "GO":drawGO, "MT":drawMT, "BA":drawBA, "SE":drawSE, "AL":drawAL, "PB":drawPB, "PE":drawPE, "AM":drawAM, "RR":drawRR, "TO":drawTO, "RO":drawRO, "AC":drawAC, "PA":drawPA, "AP":drawAP, "MA":drawMA, "PI":drawPI, "CE":drawCE, "RN":drawRN}
 var statesFillStyleDict = {"NORTE":"#72DC00", "NORDESTE":"#0099FF", "CENTRO-OESTE":"#FFD500", "SUDESTE":"#FF0000", "SUL":"#FF9A00"}
-var statesBorderFillDict = {"AM": "#aeffff","PA":"#aeffff","AC":"#aeffff","RJ":"#aeffff","SP":"#aeffff","MG": "#aeffff", "ES":"#aeffff","CE":"#aeffff","BA":"#aeffff","PE":"#aeffff","MA":"#aeffff","RN":"#aeffff","PB":"#aeffff","AL":"#aeffff","SE":"#aeffff","PI":"#aeffff","RO":"#aeffff","RR":"#aeffff","AP":"#aeffff","MT":"#aebbff","MS":"#aebbff","GO":"#aebbff","TO":"#aeffff","PR":"#aebbff","SC":"#aebbff","RS":"#aebbff",}
+var statesStrokeStyleDict = {"AM": "#aeffff","PA":"#aeffff","AC":"#aeffff","RJ":"#aeffff","SP":"#aeffff","MG": "#aeffff", "ES":"#aeffff","CE":"#aeffff","BA":"#aeffff","PE":"#aeffff","MA":"#aeffff","RN":"#aeffff","PB":"#aeffff","AL":"#aeffff","SE":"#aeffff","PI":"#aeffff","RO":"#aeffff","RR":"#aeffff","AP":"#aeffff","MT":"#aebbff","MS":"#aebbff","GO":"#aebbff","TO":"#aeffff","PR":"#aebbff","SC":"#aebbff","RS":"#aebbff",}
 //RIO GRANDE DO SUL
 function drawRS(execEvent) {
     pathRS = new Path2D()
@@ -18,7 +18,7 @@ function drawRS(execEvent) {
     pathRS.lineTo(2.7 * 100, 5.6 * 100);
     pathRS.lineTo(3.2 * 100, 5.0 * 100);
     pathRS.closePath();
-    treatEvent(execEvent, pathRS, statesFillStyleDict["SUL"], estado = "RS")
+    treatEvent(execEvent, pathRS, statesFillStyleDict["SUL"], statesStrokeStyleDict["RS"])
 }
 
 //SANTA CATARINA
@@ -35,7 +35,7 @@ function drawSC(execEvent) {
     pathSC.lineTo(3.8 * 100, 5.3 * 100);
     pathSC.lineTo(3.9 * 100, 5.4 * 100);
     pathSC.closePath();
-    treatEvent(execEvent, pathSC, statesFillStyleDict["SUL"], estado = "SC")
+    treatEvent(execEvent, pathSC, statesFillStyleDict["SUL"], statesStrokeStyleDict["SC"])
 }
 
 //PARANA
@@ -53,7 +53,7 @@ function drawPR(execEvent) {
     pathPR.lineTo(3.6 * 100, 5.0 * 100);
     pathPR.lineTo(3.2 * 100, 4.9 * 100);
     pathPR.closePath();
-    treatEvent(execEvent, pathPR, statesFillStyleDict["SUL"], estado="PR")
+    treatEvent(execEvent, pathPR, statesFillStyleDict["SUL"], statesStrokeStyleDict["PR"])
 }
 
 //SAO PAULO
@@ -72,7 +72,7 @@ function drawSP(execEvent) {
     pathSP.lineTo(4.0 * 100, 4.7 * 100);
     pathSP.lineTo(4.2 * 100, 4.7 * 100);
     pathSP.closePath()
-    treatEvent(execEvent, pathSP, statesFillStyleDict["SUDESTE"], estado = "SP")
+    treatEvent(execEvent, pathSP, statesFillStyleDict["SUDESTE"], statesStrokeStyleDict["SP"])
 }
 
 //MINAS GERAIS
@@ -105,7 +105,7 @@ function drawMG(execEvent) {
     pathMG.lineTo(4.4 * 100, 4.2 * 100);
     pathMG.lineTo(4.4 * 100, 4.4 * 100);
     pathMG.closePath()
-    treatEvent(execEvent, pathMG, statesFillStyleDict["SUDESTE"], estado = "MG")
+    treatEvent(execEvent, pathMG, statesFillStyleDict["SUDESTE"], statesStrokeStyleDict["MG"])
 }
 
 //RIO DE JANEIRO
@@ -120,7 +120,7 @@ function drawRJ(execEvent) {
     pathRJ.lineTo(4.8 * 100, 4.3 * 100);
     pathRJ.lineTo(4.7 * 100, 4.3 * 100);
     pathRJ.closePath()
-    treatEvent(execEvent, pathRJ, statesFillStyleDict["SUDESTE"], estado = "RJ")
+    treatEvent(execEvent, pathRJ, statesFillStyleDict["SUDESTE"], statesStrokeStyleDict["RJ"])
 }
 
 //ESPIRITO SANTO
@@ -133,7 +133,7 @@ function drawES(execEvent) {
     pathES.lineTo(5.2 * 100, 4.0 * 100);
     pathES.lineTo(5.3 * 100, 4.1 * 100);
     pathES.closePath()
-    treatEvent(execEvent, pathES, statesFillStyleDict["SUDESTE"], estado = "ES")
+    treatEvent(execEvent, pathES, statesFillStyleDict["SUDESTE"], statesStrokeStyleDict["ES"])
 }
 
 //MATO GROSSO DO SUL
@@ -151,7 +151,7 @@ function drawMS(execEvent) {
     pathMS.lineTo(2.6 * 100, 4.3 * 100);
     pathMS.lineTo(2.7 * 100, 3.7 * 100);
     pathMS.closePath()
-    treatEvent(execEvent, pathMS, statesFillStyleDict["CENTRO-OESTE"], estado = "MS")
+    treatEvent(execEvent, pathMS, statesFillStyleDict["CENTRO-OESTE"], statesStrokeStyleDict["MS"])
 }
 
 //GOIAS
@@ -176,7 +176,7 @@ function drawGO(execEvent) {
     pathGO.lineTo(3.6 * 100, 3.3 * 100);
     pathGO.lineTo(3.2 * 100, 3.6 * 100);
     pathGO.closePath()
-    treatEvent(execEvent, pathGO, statesFillStyleDict["CENTRO-OESTE"], estado = "GO")
+    treatEvent(execEvent, pathGO, statesFillStyleDict["CENTRO-OESTE"], statesStrokeStyleDict["GO"])
 }
 
 //MATO GROSSO
@@ -203,7 +203,7 @@ function drawMT(execEvent) {
     pathMT.lineTo(3.1 * 100, 3.6 * 100);
     pathMT.lineTo(3.2 * 100, 3.6 * 100);
     pathMT.closePath()
-    treatEvent(execEvent, pathMT, statesFillStyleDict["CENTRO-OESTE"], estado = "MT")
+    treatEvent(execEvent, pathMT, statesFillStyleDict["CENTRO-OESTE"], statesStrokeStyleDict["MT"])
 }
 
 //BAHIA
@@ -238,7 +238,7 @@ function drawBA(execEvent) {
     pathBA.lineTo(5.7 * 100, 2.65 * 100);
     pathBA.lineTo(5.9 * 100, 2.7 * 100);
     pathBA.closePath()
-    treatEvent(execEvent, pathBA, statesFillStyleDict["NORDESTE"], estado = "BA")
+    treatEvent(execEvent, pathBA, statesFillStyleDict["NORDESTE"], statesStrokeStyleDict["BA"])
 }
 
 //SERGIPE
@@ -251,7 +251,7 @@ function drawSE(execEvent) {
     pathSE.lineTo(5.7 * 100, 2.65 * 100);
     pathSE.lineTo(5.9 * 100, 2.7 * 100);
     pathSE.closePath()
-    treatEvent(execEvent, pathSE, statesFillStyleDict["NORDESTE"], estado = "SE")
+    treatEvent(execEvent, pathSE, statesFillStyleDict["NORDESTE"], statesStrokeStyleDict["SE"])
 }
 
 //ALAGOAS
@@ -274,7 +274,7 @@ function drawAL(execEvent) {
     pathAL.lineTo(5.5 * 100, 2.3 * 100);
     pathAL.lineTo(5.8 * 100, 2.4 * 100);
     pathAL.closePath()
-    treatEvent(execEvent, pathAL, statesFillStyleDict["NORDESTE"], estado = "AL")
+    treatEvent(execEvent, pathAL, statesFillStyleDict["NORDESTE"], statesStrokeStyleDict["AL"])
 }
 
 //PARAÍBA
@@ -293,7 +293,7 @@ function drawPB(execEvent) {
     pathPB.lineTo(5.6 * 100, 1.9 * 100);
     pathPB.lineTo(5.6 * 100, 2.2 * 100);
     pathPB.closePath()
-    treatEvent(execEvent, pathPB, statesFillStyleDict["NORDESTE"], estado = "PB")
+    treatEvent(execEvent, pathPB, statesFillStyleDict["NORDESTE"], statesStrokeStyleDict["PB"])
     ctx.fillStyle = "#0099FF";
 }
 
@@ -307,7 +307,7 @@ function drawPE(execEvent) {
     pathPE.lineTo(6.0 * 100, 2.5 * 100);
     pathPE.lineTo(5.8 * 100, 2.4 * 100);
     pathPE.closePath()
-    treatEvent(execEvent, pathPE, statesFillStyleDict["NORDESTE"], estado = "PE")
+    treatEvent(execEvent, pathPE, statesFillStyleDict["NORDESTE"], statesStrokeStyleDict["PE"])
 }
 
 //AMAZONAS
@@ -346,12 +346,10 @@ function drawAM(execEvent) {
     pathAM.lineTo(1.5 * 100, 0.8 * 100);
     pathAM.lineTo(1.6 * 100, 0.6 * 100);
     pathAM.closePath()
-
-    treatEvent(execEvent, pathAM, statesFillStyleDict["NORTE"], estado = "AM")
+    treatEvent(execEvent, pathAM, statesFillStyleDict["NORTE"], statesStrokeStyleDict["AM"])
     ctx.font = "40px Arial";
     ctx.fillStyle = "#000000"
     ctx.fillText("AM", 1.3 * 100, 1.65 * 100);
-
 }
 
 //RORAIMA
@@ -375,7 +373,7 @@ function drawRR(execEvent) {
     pathRR.lineTo(2.5 * 100, 1.0 * 100);
     pathRR.lineTo(2.5 * 100, 0.7 * 100);
     pathRR.closePath()
-    treatEvent(execEvent, pathRR, statesFillStyleDict["NORTE"], estado = "RR")
+    treatEvent(execEvent, pathRR, statesFillStyleDict["NORTE"], statesStrokeStyleDict["RR"])
 }
 
 //TOCANTINS
@@ -401,7 +399,7 @@ function drawTO(execEvent) {
     pathTO.lineTo(3.7 * 100, 2.8 * 100);
     pathTO.lineTo(3.8 * 100, 2.4 * 100);
     pathTO.closePath()
-    treatEvent(execEvent, pathTO, statesFillStyleDict["NORTE"], estado = "TO")
+    treatEvent(execEvent, pathTO, statesFillStyleDict["NORTE"], statesStrokeStyleDict["TO"])
 }
 
 //RONDONIA
@@ -420,7 +418,7 @@ function drawRO(execEvent) {
     pathRO.lineTo(2.3 * 100, 2.8 * 100);
     pathRO.lineTo(2.2 * 100, 3.0 * 100);
     pathRO.closePath()
-    treatEvent(execEvent, pathRO, statesFillStyleDict["NORTE"], estado = "RO")
+    treatEvent(execEvent, pathRO, statesFillStyleDict["NORTE"], statesStrokeStyleDict["RO"])
 }
 
 //ACRE
@@ -436,7 +434,7 @@ function drawAC(execEvent) {
     pathAC.lineTo(1.0 * 100, 2.7 * 100);
     pathAC.lineTo(1.3 * 100, 2.5 * 100);
     pathAC.closePath()
-    treatEvent(execEvent, pathAC, statesFillStyleDict["NORTE"], estado = "AC")
+    treatEvent(execEvent, pathAC, statesFillStyleDict["NORTE"], statesStrokeStyleDict["AC"])
 }
 
 //PARÁ
@@ -470,7 +468,7 @@ function drawPA(execEvent) {
     pathPA.lineTo(3.84 * 100, 0.95 * 100);
     pathPA.lineTo(4.0 * 100, 1.0 * 100);
     pathPA.closePath()
-    treatEvent(execEvent, pathPA, statesFillStyleDict["NORTE"], estado = "PA")
+    treatEvent(execEvent, pathPA, statesFillStyleDict["NORTE"], statesStrokeStyleDict["PA"])
 }
 
 //AMAPÁ
@@ -489,7 +487,7 @@ function drawAP(execEvent) {
     pathAP.lineTo(3.43 * 100, 0.38 * 100);
     pathAP.lineTo(3.63 * 100, 0.21 * 100);
     pathAP.closePath()
-    treatEvent(execEvent, pathAP, statesFillStyleDict["NORTE"], estado = "AP")
+    treatEvent(execEvent, pathAP, statesFillStyleDict["NORTE"], statesStrokeStyleDict["AP"])
 }
 
 //MARANHÃO
@@ -517,7 +515,7 @@ function drawMA(execEvent) {
     pathMA.lineTo(4.3 * 100, 1.5 * 100);
     pathMA.lineTo(4.50 * 100, 1 * 100);
     pathMA.closePath()
-    treatEvent(execEvent, pathMA, statesFillStyleDict["NORDESTE"], estado = "MA")
+    treatEvent(execEvent, pathMA, statesFillStyleDict["NORDESTE"], statesStrokeStyleDict["MA"])
 }
 
 //PIAUÍ
@@ -543,7 +541,7 @@ function drawPI(execEvent) {
     pathPI.lineTo(5.2 * 100, 1.4 * 100);
     pathPI.lineTo(5.12 * 100, 1.36 * 100);
     pathPI.closePath()
-    treatEvent(execEvent, pathPI, statesFillStyleDict["NORDESTE"], estado="PI")
+    treatEvent(execEvent, pathPI, statesFillStyleDict["NORDESTE"], statesStrokeStyleDict["PI"])
 }
 
 //CEARÁ
@@ -562,7 +560,7 @@ function drawCE(execEvent) {
     pathCE.lineTo(5.5 * 100, 2.1 * 100);
     pathCE.lineTo(5.3 * 100, 2.1 * 100);
     pathCE.closePath()
-    treatEvent(execEvent, pathCE, statesFillStyleDict["NORDESTE"], estado = "CE")
+    treatEvent(execEvent, pathCE, statesFillStyleDict["NORDESTE"], statesStrokeStyleDict["CE"])
 }
 
 //RIO GRANDE DO NORTE
@@ -580,7 +578,7 @@ function drawRN(execEvent) {
     pathRN.lineTo(6.2 * 100, 1.7 * 100);
     pathRN.lineTo(5.8 * 100, 1.7 * 100);
     pathRN.closePath()
-    treatEvent(execEvent, pathRN, statesFillStyleDict["NORDESTE"], estado = "RN")
+    treatEvent(execEvent, pathRN, statesFillStyleDict["NORDESTE"], statesStrokeStyleDict["RN"])
 }
 
 function draw(state, execEvent) {
@@ -680,7 +678,7 @@ function clearMouse() {
     drawCanvas("mouseLeft");
 }
 
-function treatEvent(evt, path, fillStyle, estado) {
+function treatEvent(evt, path, fillStyle, strokeStyle) {
     if (evt == "onLoad") {
         ctx.fillStyle = fillStyle;
         ctx.fill(path);
@@ -689,7 +687,7 @@ function treatEvent(evt, path, fillStyle, estado) {
     } else if (evt == "mouseOver") {
         clearMouse();
         ctx.lineWidth = 4;
-        ctx.strokeStyle = statesBorderFillDict[estado];
+        ctx.strokeStyle = strokeStyle;
         canvas.style.cursor = "pointer";
     }
     else if (evt == "mouseLeft")
