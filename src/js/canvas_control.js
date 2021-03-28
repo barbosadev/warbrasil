@@ -347,6 +347,9 @@ function drawAM(execEvent) {
     pathAM.lineTo(1.6 * 100, 0.6 * 100);
     pathAM.closePath()
     treatEvent(execEvent, pathAM, statesFillStyleDict["NORTE"])
+    ctx.font = "40px Arial";
+    ctx.fillStyle = "#000000"
+    ctx.fillText("AM", 1.3 * 100, 1.65 * 100);
 }
 
 //RORAIMA
