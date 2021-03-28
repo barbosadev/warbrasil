@@ -700,7 +700,6 @@ function OverCanvas(evt) {
 }
 
 function CanvasClick(evt) {
-    console.clear();
     // posição dos cliques descontando a distância da borda da janela
     var posX = evt.clientX - canvas.offsetLeft + window.scrollX;
     var posY = evt.clientY - canvas.offsetTop + window.scrollY;
