@@ -578,7 +578,8 @@ function drawRN(execEvent) {
 }
 
 function draw(state, execEvent) {
-    statesDrawFunctionDict[state](execEvent)
+    if(typeof statesDrawFunctionDict[state] === 'function')
+        statesDrawFunctionDict[state](execEvent)
 }
 
 function drawCanvas(state) {
