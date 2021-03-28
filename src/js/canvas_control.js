@@ -1,36 +1,9 @@
-var canvas = ""
-var ctx = ""
-var pathRS = new Path2D();
-var pathSC = new Path2D();
-var pathPR = new Path2D();
-var pathSP = new Path2D();
-var pathMG = new Path2D();
-var pathRJ = new Path2D();
-var pathES = new Path2D();
-var pathMS = new Path2D();
-var pathGO = new Path2D();
-var pathMT = new Path2D();
-var pathBA = new Path2D();
-var pathSE = new Path2D();
-var pathAL = new Path2D();
-var pathPB = new Path2D();
-var pathPE = new Path2D();
-var pathAM = new Path2D();
-var pathRR = new Path2D();
-var pathTO = new Path2D();
-var pathRO = new Path2D();
-var pathAC = new Path2D();
-var pathPA = new Path2D();
-var pathAP = new Path2D();
-var pathMA = new Path2D();
-var pathPI = new Path2D();
-var pathCE = new Path2D();
-var pathRN = new Path2D();
-
+var canvas = ctx = pathRS = pathSC = pathPR = pathSP = pathMG = pathRJ = pathES = pathMS = pathGO = pathMT = pathBA = pathSE = pathAL = pathPB = pathPE = pathAM = pathRR = pathTO = pathRO = pathAC = pathPA = pathAP = pathMA = pathPI = pathCE = pathRN = null
 var statesDrawFunctionDict = {"RS":drawRS, "SC":drawSC, "PR":drawPR, "SP":drawSP, "MG":drawMG, "RJ":drawRJ, "ES":drawES, "MS":drawMS, "GO":drawGO, "MT":drawMT, "BA":drawBA, "SE":drawSE, "AL":drawAL, "PB":drawPB, "PE":drawPE, "AM":drawAM, "RR":drawRR, "TO":drawTO, "RO":drawRO, "AC":drawAC, "PA":drawPA, "AP":drawAP, "MA":drawMA, "PI":drawPI, "CE":drawCE, "RN":drawRN}
 
 //RIO GRANDE DO SUL
 function drawRS(execEvent) {
+    pathRS = new Path2D()
     pathRS.moveTo(3.2 * 100, 5.0 * 100);
     pathRS.lineTo(3.6 * 100, 5.1 * 100);
     pathRS.lineTo(3.8 * 100, 5.3 * 100);
@@ -49,6 +22,7 @@ function drawRS(execEvent) {
 
 //SANTA CATARINA
 function drawSC(execEvent) {
+    pathSC = new Path2D()
     pathSC.moveTo(3.9 * 100, 5.4 * 100);
     pathSC.lineTo(4.1 * 100, 5.3 * 100);
     pathSC.lineTo(4.1 * 100, 4.9 * 100);
@@ -65,6 +39,7 @@ function drawSC(execEvent) {
 
 //PARANA
 function drawPR(execEvent) {
+    pathPR = new Path2D()
     pathPR.moveTo(3.2 * 100, 4.9 * 100);
     pathPR.lineTo(3.1 * 100, 4.8 * 100);
     pathPR.lineTo(3.2 * 100, 4.6 * 100);
@@ -82,6 +57,7 @@ function drawPR(execEvent) {
 
 //SAO PAULO
 function drawSP(execEvent) {
+    pathSP = new Path2D()
     pathSP.moveTo(4.2 * 100, 4.7 * 100);
     pathSP.lineTo(4.7 * 100, 4.4 * 100);
     pathSP.lineTo(4.7 * 100, 4.3 * 100);
@@ -100,6 +76,7 @@ function drawSP(execEvent) {
 
 //MINAS GERAIS
 function drawMG(execEvent) {
+    pathMG = new Path2D()
     pathMG.moveTo(4.4 * 100, 4.4 * 100);
     pathMG.lineTo(4.7 * 100, 4.3 * 100);
     pathMG.lineTo(4.8 * 100, 4.3 * 100);
@@ -132,6 +109,7 @@ function drawMG(execEvent) {
 
 //RIO DE JANEIRO
 function drawRJ(execEvent) {
+    pathRJ = new Path2D()
     pathRJ.moveTo(4.7 * 100, 4.3 * 100);
     pathRJ.lineTo(4.7 * 100, 4.4 * 100);
     pathRJ.lineTo(5.1 * 100, 4.4 * 100);
@@ -146,6 +124,7 @@ function drawRJ(execEvent) {
 
 //ESPIRITO SANTO
 function drawES(execEvent) {
+    pathES = new Path2D()
     pathES.moveTo(5.3 * 100, 4.1 * 100);
     pathES.lineTo(5.5 * 100, 4.0 * 100);
     pathES.lineTo(5.5 * 100, 3.8 * 100);
@@ -158,6 +137,7 @@ function drawES(execEvent) {
 
 //MATO GROSSO DO SUL
 function drawMS(execEvent) {
+    pathMS = new Path2D()
     pathMS.moveTo(2.7 * 100, 3.7 * 100);
     pathMS.lineTo(2.9 * 100, 3.5 * 100);
     pathMS.lineTo(3.1 * 100, 3.6 * 100);
@@ -175,6 +155,7 @@ function drawMS(execEvent) {
 
 //GOIAS
 function drawGO(execEvent) {
+    pathGO = new Path2D()
     pathGO.moveTo(3.2 * 100, 3.6 * 100);
     pathGO.lineTo(3.7 * 100, 3.9 * 100);
     pathGO.lineTo(3.8 * 100, 3.8 * 100);
@@ -199,6 +180,7 @@ function drawGO(execEvent) {
 
 //MATO GROSSO
 function drawMT(execEvent) {
+    pathMT = new Path2D()
     pathMT.moveTo(3.2 * 100, 3.6 * 100);
     pathMT.lineTo(3.6 * 100, 3.3 * 100);
     pathMT.lineTo(3.7 * 100, 3.1 * 100);
@@ -225,6 +207,7 @@ function drawMT(execEvent) {
 
 //BAHIA
 function drawBA(execEvent) {
+    pathBA = new Path2D()
     pathBA.moveTo(5.9 * 100, 2.7 * 100);
     pathBA.lineTo(5.8 * 100, 2.9 * 100);
     pathBA.lineTo(5.6 * 100, 2.9 * 100);
@@ -259,6 +242,7 @@ function drawBA(execEvent) {
 
 //SERGIPE
 function drawSE(execEvent) {
+    pathSE = new Path2D()
     pathSE.moveTo(5.9 * 100, 2.7 * 100);
     pathSE.lineTo(6.0 * 100, 2.5 * 100);
     pathSE.lineTo(5.8 * 100, 2.4 * 100);
@@ -271,6 +255,7 @@ function drawSE(execEvent) {
 
 //ALAGOAS
 function drawAL(execEvent) {
+    pathAL = new Path2D()
     pathAL.moveTo(5.8 * 100, 2.4 * 100);
     pathAL.lineTo(5.82 * 100, 2.3 * 100);
     pathAL.lineTo(5.9 * 100, 2.35 * 100);
@@ -293,6 +278,7 @@ function drawAL(execEvent) {
 
 //PARAÍBA
 function drawPB(execEvent) {
+    pathPB = new Path2D()
     pathPB.moveTo(5.6 * 100, 2.2 * 100);
     pathPB.lineTo(5.8 * 100, 2.1 * 100);
     pathPB.lineTo(5.9 * 100, 2.1 * 100);
@@ -312,6 +298,7 @@ function drawPB(execEvent) {
 
 //PERNAMBUCO
 function drawPE(execEvent) {
+    pathPE = new Path2D()
     pathPE.moveTo(5.8 * 100, 2.4 * 100);
     pathPE.lineTo(5.82 * 100, 2.3 * 100);
     pathPE.lineTo(5.9 * 100, 2.35 * 100);
@@ -324,6 +311,7 @@ function drawPE(execEvent) {
 
 //AMAZONAS
 function drawAM(execEvent) {
+    pathAM = new Path2D()
     pathAM.moveTo(1.6 * 100, 0.6 * 100);
     pathAM.lineTo(1.8 * 100, 0.7 * 100);
     pathAM.lineTo(1.9 * 100, 0.8 * 100);
@@ -362,6 +350,7 @@ function drawAM(execEvent) {
 
 //RORAIMA
 function drawRR(execEvent) {
+    pathRR = new Path2D()
     pathRR.moveTo(2.5 * 100, 0.7 * 100);
     pathRR.lineTo(2.3 * 100, 0.6 * 100);
     pathRR.lineTo(2.3 * 100, 0.5 * 100);
@@ -385,6 +374,7 @@ function drawRR(execEvent) {
 
 //TOCANTINS
 function drawTO(execEvent) {
+    pathTO = new Path2D()
     pathTO.moveTo(3.8 * 100, 2.4 * 100);
     pathTO.lineTo(4.0 * 100, 2.2 * 100);
     pathTO.lineTo(4.0 * 100, 2.1 * 100);
@@ -410,6 +400,7 @@ function drawTO(execEvent) {
 
 //RONDONIA
 function drawRO(execEvent) {
+    pathRO = new Path2D()
     pathRO.moveTo(2.2 * 100, 3.0 * 100);
     pathRO.lineTo(2.1 * 100, 3.0 * 100);
     pathRO.lineTo(1.6 * 100, 2.9 * 100);
@@ -428,6 +419,7 @@ function drawRO(execEvent) {
 
 //ACRE
 function drawAC(execEvent) {
+    pathAC = new Path2D()
     pathAC.moveTo(1.3 * 100, 2.5 * 100);
     pathAC.lineTo(0.1 * 100, 2.0 * 100);
     pathAC.lineTo(0.1 * 100, 2.1 * 100);
@@ -443,6 +435,7 @@ function drawAC(execEvent) {
 
 //PARÁ
 function drawPA(execEvent) {
+    pathPA = new Path2D()
     pathPA.moveTo(2.7 * 100, 2.3 * 100);
     pathPA.lineTo(3.8 * 100, 2.4 * 100);
     pathPA.lineTo(4.0 * 100, 2.2 * 100);
@@ -476,6 +469,7 @@ function drawPA(execEvent) {
 
 //AMAPÁ
 function drawAP(execEvent) {
+    pathAP = new Path2D()
     pathAP.moveTo(3.63 * 100, 0.21 * 100);
     pathAP.lineTo(3.75 * 100, 0.46 * 100);
     pathAP.lineTo(3.75 * 100, 0.63 * 100);
@@ -494,6 +488,7 @@ function drawAP(execEvent) {
 
 //MARANHÃO
 function drawMA(execEvent) {
+    pathMA = new Path2D()
     pathMA.moveTo(4.5 * 100, 1 * 100);
     pathMA.lineTo(4.75 * 100, 1.25 * 100);
     pathMA.lineTo(4.75 * 100, 1.36 * 100);
@@ -521,6 +516,7 @@ function drawMA(execEvent) {
 
 //PIAUÍ
 function drawPI(execEvent) {
+    pathPI = new Path2D()
     pathPI.lineTo(5.12 * 100, 1.36 * 100);
     pathPI.lineTo(5 * 100, 1.53 * 100);
     pathPI.lineTo(5 * 100, 1.78 * 100);
@@ -546,6 +542,7 @@ function drawPI(execEvent) {
 
 //CEARÁ
 function drawCE(execEvent) {
+    pathCE = new Path2D()
     pathCE.lineTo(5.3 * 100, 2.1 * 100);
     pathCE.lineTo(5.2 * 100, 1.8 * 100);
     pathCE.lineTo(5.2 * 100, 1.4 * 100);
@@ -564,6 +561,7 @@ function drawCE(execEvent) {
 
 //RIO GRANDE DO NORTE
 function drawRN(execEvent) {
+    pathRN = new Path2D()
     pathRN.lineTo(5.8 * 100, 1.7 * 100);
     pathRN.lineTo(5.7 * 100, 1.8 * 100);
     pathRN.lineTo(5.7 * 100, 1.9 * 100);
