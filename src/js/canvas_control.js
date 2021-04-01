@@ -1,10 +1,11 @@
 var canvas = ctx = pathRS = pathSC = pathPR = pathSP = pathMG = pathRJ = pathES = pathMS = pathGO = pathMT = pathBA = pathSE = pathAL = pathPB = pathPE = pathAM = pathRR = pathTO = pathRO = pathAC = pathPA = pathAP = pathMA = pathPI = pathCE = pathRN = null
 var statesDrawFunctionDict = {"RS":drawRS, "SC":drawSC, "PR":drawPR, "SP":drawSP, "MG":drawMG, "RJ":drawRJ, "ES":drawES, "MS":drawMS, "GO":drawGO, "MT":drawMT, "BA":drawBA, "SE":drawSE, "AL":drawAL, "PB":drawPB, "PE":drawPE, "AM":drawAM, "RR":drawRR, "TO":drawTO, "RO":drawRO, "AC":drawAC, "PA":drawPA, "AP":drawAP, "MA":drawMA, "PI":drawPI, "CE":drawCE, "RN":drawRN}
-var statesFillStyleDict = {"NORTE":"#72DC00", "NORDESTE":"#0099FF", "CENTRO-OESTE":"#FFD500", "SUDESTE":"#FF0000", "SUL":"#FF9A00"}
-var statesStrokeStyleDict = {"AM": "#aeffff","PA":"#aeffff","AC":"#aeffff","RJ":"#aeffff","SP":"#aeffff","MG": "#aeffff", "ES":"#aeffff","CE":"#aeffff","BA":"#aeffff","PE":"#aeffff","MA":"#aeffff","RN":"#aeffff","PB":"#aeffff","AL":"#aeffff","SE":"#aeffff","PI":"#aeffff","RO":"#aeffff","RR":"#aeffff","AP":"#aeffff","MT":"#aebbff","MS":"#aebbff","GO":"#aebbff","TO":"#aeffff","PR":"#aebbff","SC":"#aebbff","RS":"#aebbff",}
+
+var playerStyleDict = {"P1": ["#ff512c", "#ff2d00"], "P2": ["#ffd74f", "#ffc500"], "P3": ["#9cff5c", "#53d500"], "P4": ["#64e7ff", "#0055ff"], "P5": ["#f97dff", "#c200a2"]} //player:[fillstyle, strokestyle]
+var stateOwnerDict = {"RS": "", "SC": "", "PR": "", "SP": "", "MG": "", "RJ": "", "ES": "", "MS": "", "GO": "", "MT": "", "BA": "", "SE": "", "AL": "", "PB": "", "PE": "", "AM": "", "RR": "", "TO": "", "RO": "", "AC": "", "PA": "", "AP": "", "MA": "", "PI": "", "CE": "", "RN": ""} //state:owner
 
 //RIO GRANDE DO SUL
-function drawRS(execEvent) {
+function drawRS(execEvent, player=stateOwnerDict["RS"]) {
     pathRS = new Path2D()
     pathRS.moveTo(3.2 * 100, 5.0 * 100);
     pathRS.lineTo(3.6 * 100, 5.1 * 100);
@@ -19,11 +20,11 @@ function drawRS(execEvent) {
     pathRS.lineTo(2.7 * 100, 5.6 * 100);
     pathRS.lineTo(3.2 * 100, 5.0 * 100);
     pathRS.closePath();
-    treatEvent(execEvent, pathRS, statesFillStyleDict["SUL"], statesStrokeStyleDict["RS"])
+    treatEvent(execEvent, pathRS, playerStyleDict[player][0], playerStyleDict[player][1])
 }
 
 //SANTA CATARINA
-function drawSC(execEvent) {
+function drawSC(execEvent, player=stateOwnerDict["SC"]) {
     pathSC = new Path2D()
     pathSC.moveTo(3.9 * 100, 5.4 * 100);
     pathSC.lineTo(4.1 * 100, 5.3 * 100);
@@ -36,11 +37,11 @@ function drawSC(execEvent) {
     pathSC.lineTo(3.8 * 100, 5.3 * 100);
     pathSC.lineTo(3.9 * 100, 5.4 * 100);
     pathSC.closePath();
-    treatEvent(execEvent, pathSC, statesFillStyleDict["SUL"], statesStrokeStyleDict["SC"])
+    treatEvent(execEvent, pathSC, playerStyleDict[player][0], playerStyleDict[player][1])
 }
 
 //PARANA
-function drawPR(execEvent) {
+function drawPR(execEvent, player=stateOwnerDict["PR"]) {
     pathPR = new Path2D()
     pathPR.moveTo(3.2 * 100, 4.9 * 100);
     pathPR.lineTo(3.1 * 100, 4.8 * 100);
@@ -54,11 +55,11 @@ function drawPR(execEvent) {
     pathPR.lineTo(3.6 * 100, 5.0 * 100);
     pathPR.lineTo(3.2 * 100, 4.9 * 100);
     pathPR.closePath();
-    treatEvent(execEvent, pathPR, statesFillStyleDict["SUL"], statesStrokeStyleDict["PR"])
+    treatEvent(execEvent, pathPR, playerStyleDict[player][0], playerStyleDict[player][1])
 }
 
 //SAO PAULO
-function drawSP(execEvent) {
+function drawSP(execEvent, player=stateOwnerDict["SP"]) {
     pathSP = new Path2D()
     pathSP.moveTo(4.2 * 100, 4.7 * 100);
     pathSP.lineTo(4.7 * 100, 4.4 * 100);
@@ -73,11 +74,11 @@ function drawSP(execEvent) {
     pathSP.lineTo(4.0 * 100, 4.7 * 100);
     pathSP.lineTo(4.2 * 100, 4.7 * 100);
     pathSP.closePath()
-    treatEvent(execEvent, pathSP, statesFillStyleDict["SUDESTE"], statesStrokeStyleDict["SP"])
+    treatEvent(execEvent, pathSP, playerStyleDict[player][0], playerStyleDict[player][1])
 }
 
 //MINAS GERAIS
-function drawMG(execEvent) {
+function drawMG(execEvent, player=stateOwnerDict["MG"]) {
     pathMG = new Path2D()
     pathMG.moveTo(4.4 * 100, 4.4 * 100);
     pathMG.lineTo(4.7 * 100, 4.3 * 100);
@@ -106,11 +107,11 @@ function drawMG(execEvent) {
     pathMG.lineTo(4.4 * 100, 4.2 * 100);
     pathMG.lineTo(4.4 * 100, 4.4 * 100);
     pathMG.closePath()
-    treatEvent(execEvent, pathMG, statesFillStyleDict["SUDESTE"], statesStrokeStyleDict["MG"])
+    treatEvent(execEvent, pathMG, playerStyleDict[player][0], playerStyleDict[player][1])
 }
 
 //RIO DE JANEIRO
-function drawRJ(execEvent) {
+function drawRJ(execEvent, player=stateOwnerDict["RJ"]) {
     pathRJ = new Path2D()
     pathRJ.moveTo(4.7 * 100, 4.3 * 100);
     pathRJ.lineTo(4.7 * 100, 4.4 * 100);
@@ -121,11 +122,11 @@ function drawRJ(execEvent) {
     pathRJ.lineTo(4.8 * 100, 4.3 * 100);
     pathRJ.lineTo(4.7 * 100, 4.3 * 100);
     pathRJ.closePath()
-    treatEvent(execEvent, pathRJ, statesFillStyleDict["SUDESTE"], statesStrokeStyleDict["RJ"])
+    treatEvent(execEvent, pathRJ, playerStyleDict[player][0], playerStyleDict[player][1])
 }
 
 //ESPIRITO SANTO
-function drawES(execEvent) {
+function drawES(execEvent, player=stateOwnerDict["ES"]) {
     pathES = new Path2D()
     pathES.moveTo(5.3 * 100, 4.1 * 100);
     pathES.lineTo(5.5 * 100, 4.0 * 100);
@@ -134,11 +135,11 @@ function drawES(execEvent) {
     pathES.lineTo(5.2 * 100, 4.0 * 100);
     pathES.lineTo(5.3 * 100, 4.1 * 100);
     pathES.closePath()
-    treatEvent(execEvent, pathES, statesFillStyleDict["SUDESTE"], statesStrokeStyleDict["ES"])
+    treatEvent(execEvent, pathES, playerStyleDict[player][0], playerStyleDict[player][1])
 }
 
 //MATO GROSSO DO SUL
-function drawMS(execEvent) {
+function drawMS(execEvent, player=stateOwnerDict["MS"]) {
     pathMS = new Path2D()
     pathMS.moveTo(2.7 * 100, 3.7 * 100);
     pathMS.lineTo(2.9 * 100, 3.5 * 100);
@@ -152,11 +153,11 @@ function drawMS(execEvent) {
     pathMS.lineTo(2.6 * 100, 4.3 * 100);
     pathMS.lineTo(2.7 * 100, 3.7 * 100);
     pathMS.closePath()
-    treatEvent(execEvent, pathMS, statesFillStyleDict["CENTRO-OESTE"], statesStrokeStyleDict["MS"])
+    treatEvent(execEvent, pathMS, playerStyleDict[player][0], playerStyleDict[player][1])
 }
 
 //GOIAS
-function drawGO(execEvent) {
+function drawGO(execEvent, player=stateOwnerDict["GO"]) {
     pathGO = new Path2D()
     pathGO.moveTo(3.2 * 100, 3.6 * 100);
     pathGO.lineTo(3.7 * 100, 3.9 * 100);
@@ -177,11 +178,11 @@ function drawGO(execEvent) {
     pathGO.lineTo(3.6 * 100, 3.3 * 100);
     pathGO.lineTo(3.2 * 100, 3.6 * 100);
     pathGO.closePath()
-    treatEvent(execEvent, pathGO, statesFillStyleDict["CENTRO-OESTE"], statesStrokeStyleDict["GO"])
+    treatEvent(execEvent, pathGO, playerStyleDict[player][0], playerStyleDict[player][1])
 }
 
 //MATO GROSSO
-function drawMT(execEvent) {
+function drawMT(execEvent, player=stateOwnerDict["MT"]) {
     pathMT = new Path2D()
     pathMT.moveTo(3.2 * 100, 3.6 * 100);
     pathMT.lineTo(3.6 * 100, 3.3 * 100);
@@ -204,11 +205,11 @@ function drawMT(execEvent) {
     pathMT.lineTo(3.1 * 100, 3.6 * 100);
     pathMT.lineTo(3.2 * 100, 3.6 * 100);
     pathMT.closePath()
-    treatEvent(execEvent, pathMT, statesFillStyleDict["CENTRO-OESTE"], statesStrokeStyleDict["MT"])
+    treatEvent(execEvent, pathMT, playerStyleDict[player][0], playerStyleDict[player][1])
 }
 
 //BAHIA
-function drawBA(execEvent) {
+function drawBA(execEvent, player=stateOwnerDict["BA"]) {
     pathBA = new Path2D()
     pathBA.moveTo(5.9 * 100, 2.7 * 100);
     pathBA.lineTo(5.8 * 100, 2.9 * 100);
@@ -239,11 +240,11 @@ function drawBA(execEvent) {
     pathBA.lineTo(5.7 * 100, 2.65 * 100);
     pathBA.lineTo(5.9 * 100, 2.7 * 100);
     pathBA.closePath()
-    treatEvent(execEvent, pathBA, statesFillStyleDict["NORDESTE"], statesStrokeStyleDict["BA"])
+    treatEvent(execEvent, pathBA, playerStyleDict[player][0], playerStyleDict[player][1])
 }
 
 //SERGIPE
-function drawSE(execEvent) {
+function drawSE(execEvent, player=stateOwnerDict["SE"]) {
     pathSE = new Path2D()
     pathSE.moveTo(5.9 * 100, 2.7 * 100);
     pathSE.lineTo(6.0 * 100, 2.5 * 100);
@@ -252,11 +253,11 @@ function drawSE(execEvent) {
     pathSE.lineTo(5.7 * 100, 2.65 * 100);
     pathSE.lineTo(5.9 * 100, 2.7 * 100);
     pathSE.closePath()
-    treatEvent(execEvent, pathSE, statesFillStyleDict["NORDESTE"], statesStrokeStyleDict["SE"])
+    treatEvent(execEvent, pathSE, playerStyleDict[player][0], playerStyleDict[player][1])
 }
 
 //ALAGOAS
-function drawAL(execEvent) {
+function drawAL(execEvent, player=stateOwnerDict["AL"]) {
     pathAL = new Path2D()
     pathAL.moveTo(5.8 * 100, 2.4 * 100);
     pathAL.lineTo(5.82 * 100, 2.3 * 100);
@@ -275,11 +276,11 @@ function drawAL(execEvent) {
     pathAL.lineTo(5.5 * 100, 2.3 * 100);
     pathAL.lineTo(5.8 * 100, 2.4 * 100);
     pathAL.closePath()
-    treatEvent(execEvent, pathAL, statesFillStyleDict["NORDESTE"], statesStrokeStyleDict["AL"])
+    treatEvent(execEvent, pathAL, playerStyleDict[player][0], playerStyleDict[player][1])
 }
 
 //PARAÍBA
-function drawPB(execEvent) {
+function drawPB(execEvent, player=stateOwnerDict["PB"]) {
     pathPB = new Path2D()
     pathPB.moveTo(5.6 * 100, 2.2 * 100);
     pathPB.lineTo(5.8 * 100, 2.1 * 100);
@@ -294,12 +295,12 @@ function drawPB(execEvent) {
     pathPB.lineTo(5.6 * 100, 1.9 * 100);
     pathPB.lineTo(5.6 * 100, 2.2 * 100);
     pathPB.closePath()
-    treatEvent(execEvent, pathPB, statesFillStyleDict["NORDESTE"], statesStrokeStyleDict["PB"])
+    treatEvent(execEvent, pathPB, playerStyleDict[player][0], playerStyleDict[player][1])
     ctx.fillStyle = "#0099FF";
 }
 
 //PERNAMBUCO
-function drawPE(execEvent) {
+function drawPE(execEvent, player=stateOwnerDict["PE"]) {
     pathPE = new Path2D()
     pathPE.moveTo(5.8 * 100, 2.4 * 100);
     pathPE.lineTo(5.82 * 100, 2.3 * 100);
@@ -308,11 +309,11 @@ function drawPE(execEvent) {
     pathPE.lineTo(6.0 * 100, 2.5 * 100);
     pathPE.lineTo(5.8 * 100, 2.4 * 100);
     pathPE.closePath()
-    treatEvent(execEvent, pathPE, statesFillStyleDict["NORDESTE"], statesStrokeStyleDict["PE"])
+    treatEvent(execEvent, pathPE, playerStyleDict[player][0], playerStyleDict[player][1])
 }
 
 //AMAZONAS
-function drawAM(execEvent) {
+function drawAM(execEvent, player=stateOwnerDict["AM"]) {
     pathAM = new Path2D()
     pathAM.moveTo(1.6 * 100, 0.6 * 100);
     pathAM.lineTo(1.8 * 100, 0.7 * 100);
@@ -347,14 +348,14 @@ function drawAM(execEvent) {
     pathAM.lineTo(1.5 * 100, 0.8 * 100);
     pathAM.lineTo(1.6 * 100, 0.6 * 100);
     pathAM.closePath()
-    treatEvent(execEvent, pathAM, statesFillStyleDict["NORTE"], statesStrokeStyleDict["AM"])
+    treatEvent(execEvent, pathAM, playerStyleDict[player][0], playerStyleDict[player][1])
     ctx.font = "40px Arial";
     ctx.fillStyle = "#000000"
     ctx.fillText("AM", 1.3 * 100, 1.65 * 100);
 }
 
 //RORAIMA
-function drawRR(execEvent) {
+function drawRR(execEvent, player=stateOwnerDict["RR"]) {
     pathRR = new Path2D()
     pathRR.moveTo(2.5 * 100, 0.7 * 100);
     pathRR.lineTo(2.3 * 100, 0.6 * 100);
@@ -374,11 +375,11 @@ function drawRR(execEvent) {
     pathRR.lineTo(2.5 * 100, 1.0 * 100);
     pathRR.lineTo(2.5 * 100, 0.7 * 100);
     pathRR.closePath()
-    treatEvent(execEvent, pathRR, statesFillStyleDict["NORTE"], statesStrokeStyleDict["RR"])
+    treatEvent(execEvent, pathRR, playerStyleDict[player][0], playerStyleDict[player][1])
 }
 
 //TOCANTINS
-function drawTO(execEvent) {
+function drawTO(execEvent, player=stateOwnerDict["TO"]) {
     pathTO = new Path2D()
     pathTO.moveTo(3.8 * 100, 2.4 * 100);
     pathTO.lineTo(4.0 * 100, 2.2 * 100);
@@ -400,11 +401,11 @@ function drawTO(execEvent) {
     pathTO.lineTo(3.7 * 100, 2.8 * 100);
     pathTO.lineTo(3.8 * 100, 2.4 * 100);
     pathTO.closePath()
-    treatEvent(execEvent, pathTO, statesFillStyleDict["NORTE"], statesStrokeStyleDict["TO"])
+    treatEvent(execEvent, pathTO, playerStyleDict[player][0], playerStyleDict[player][1])
 }
 
 //RONDONIA
-function drawRO(execEvent) {
+function drawRO(execEvent, player=stateOwnerDict["RO"]) {
     pathRO = new Path2D()
     pathRO.moveTo(2.2 * 100, 3.0 * 100);
     pathRO.lineTo(2.1 * 100, 3.0 * 100);
@@ -419,11 +420,11 @@ function drawRO(execEvent) {
     pathRO.lineTo(2.3 * 100, 2.8 * 100);
     pathRO.lineTo(2.2 * 100, 3.0 * 100);
     pathRO.closePath()
-    treatEvent(execEvent, pathRO, statesFillStyleDict["NORTE"], statesStrokeStyleDict["RO"])
+    treatEvent(execEvent, pathRO, playerStyleDict[player][0], playerStyleDict[player][1])
 }
 
 //ACRE
-function drawAC(execEvent) {
+function drawAC(execEvent, player=stateOwnerDict["AC"]) {
     pathAC = new Path2D()
     pathAC.moveTo(1.3 * 100, 2.5 * 100);
     pathAC.lineTo(0.1 * 100, 2.0 * 100);
@@ -435,11 +436,11 @@ function drawAC(execEvent) {
     pathAC.lineTo(1.0 * 100, 2.7 * 100);
     pathAC.lineTo(1.3 * 100, 2.5 * 100);
     pathAC.closePath()
-    treatEvent(execEvent, pathAC, statesFillStyleDict["NORTE"], statesStrokeStyleDict["AC"])
+    treatEvent(execEvent, pathAC, playerStyleDict[player][0], playerStyleDict[player][1])
 }
 
 //PARÁ
-function drawPA(execEvent) {
+function drawPA(execEvent, player=stateOwnerDict["PA"]) {
     pathPA = new Path2D()
     pathPA.moveTo(2.7 * 100, 2.3 * 100);
     pathPA.lineTo(3.8 * 100, 2.4 * 100);
@@ -464,11 +465,11 @@ function drawPA(execEvent) {
     pathPA.lineTo(2.7 * 100, 2.2 * 100);
     pathPA.lineTo(2.7 * 100, 2.3 * 100);
     pathPA.closePath()
-    treatEvent(execEvent, pathPA, statesFillStyleDict["NORTE"], statesStrokeStyleDict["PA"])
+    treatEvent(execEvent, pathPA, playerStyleDict[player][0], playerStyleDict[player][1])
 }
 
 //AMAPÁ
-function drawAP(execEvent) {
+function drawAP(execEvent, player=stateOwnerDict["AP"]) {
     pathAP = new Path2D()
     pathAP.moveTo(3.63 * 100, 0.21 * 100);
     pathAP.lineTo(3.75 * 100, 0.46 * 100);
@@ -483,11 +484,11 @@ function drawAP(execEvent) {
     pathAP.lineTo(3.43 * 100, 0.38 * 100);
     pathAP.lineTo(3.63 * 100, 0.21 * 100);
     pathAP.closePath()
-    treatEvent(execEvent, pathAP, statesFillStyleDict["NORTE"], statesStrokeStyleDict["AP"])
+    treatEvent(execEvent, pathAP, playerStyleDict[player][0], playerStyleDict[player][1])
 }
 
 //MARANHÃO
-function drawMA(execEvent) {
+function drawMA(execEvent, player=stateOwnerDict["MA"]) {
     pathMA = new Path2D()
     pathMA.moveTo(4.5 * 100, 1 * 100);
     pathMA.lineTo(4.75 * 100, 1.25 * 100);
@@ -511,11 +512,11 @@ function drawMA(execEvent) {
     pathMA.lineTo(4.3 * 100, 1.5 * 100);
     pathMA.lineTo(4.50 * 100, 1 * 100);
     pathMA.closePath()
-    treatEvent(execEvent, pathMA, statesFillStyleDict["NORDESTE"], statesStrokeStyleDict["MA"])
+    treatEvent(execEvent, pathMA, playerStyleDict[player][0], playerStyleDict[player][1])
 }
 
 //PIAUÍ
-function drawPI(execEvent) {
+function drawPI(execEvent, player=stateOwnerDict["PI"]) {
     pathPI = new Path2D()
     pathPI.lineTo(5.12 * 100, 1.36 * 100);
     pathPI.lineTo(5 * 100, 1.53 * 100);
@@ -537,11 +538,11 @@ function drawPI(execEvent) {
     pathPI.lineTo(5.2 * 100, 1.4 * 100);
     pathPI.lineTo(5.12 * 100, 1.36 * 100);
     pathPI.closePath()
-    treatEvent(execEvent, pathPI, statesFillStyleDict["NORDESTE"], statesStrokeStyleDict["PI"])
+    treatEvent(execEvent, pathPI, playerStyleDict[player][0], playerStyleDict[player][1])
 }
 
 //CEARÁ
-function drawCE(execEvent) {
+function drawCE(execEvent, player=stateOwnerDict["CE"]) {
     pathCE = new Path2D()
     pathCE.lineTo(5.3 * 100, 2.1 * 100);
     pathCE.lineTo(5.2 * 100, 1.8 * 100);
@@ -556,11 +557,11 @@ function drawCE(execEvent) {
     pathCE.lineTo(5.5 * 100, 2.1 * 100);
     pathCE.lineTo(5.3 * 100, 2.1 * 100);
     pathCE.closePath()
-    treatEvent(execEvent, pathCE, statesFillStyleDict["NORDESTE"], statesStrokeStyleDict["CE"])
+    treatEvent(execEvent, pathCE, playerStyleDict[player][0], playerStyleDict[player][1])
 }
 
 //RIO GRANDE DO NORTE
-function drawRN(execEvent) {
+function drawRN(execEvent, player=stateOwnerDict["RN"]) {
     pathRN = new Path2D()
     pathRN.lineTo(5.8 * 100, 1.7 * 100);
     pathRN.lineTo(5.7 * 100, 1.8 * 100);
@@ -574,7 +575,7 @@ function drawRN(execEvent) {
     pathRN.lineTo(6.2 * 100, 1.7 * 100);
     pathRN.lineTo(5.8 * 100, 1.7 * 100);
     pathRN.closePath()
-    treatEvent(execEvent, pathRN, statesFillStyleDict["NORDESTE"], statesStrokeStyleDict["RN"])
+    treatEvent(execEvent, pathRN, playerStyleDict[player][0], playerStyleDict[player][1])
 }
 
 function draw(state, execEvent) {
@@ -675,19 +676,19 @@ function clearMouse() {
 }
 
 function treatEvent(evt, path, fillStyle, strokeStyle) {
+    ctx.strokeStyle = strokeStyle;
+    ctx.fillStyle = fillStyle;
     if (evt == "onLoad") {
-        ctx.fillStyle = fillStyle;
         ctx.fill(path);
         ctx.lineWidth = 3;
-        ctx.strokeStyle = "#003300";
     } else if (evt == "mouseOver") {
         clearMouse();
+        ctx.strokeStyle = "#003300";
         ctx.lineWidth = 4;
-        ctx.strokeStyle = strokeStyle;
         canvas.style.cursor = "pointer";
     }
     else if (evt == "mouseLeft")
-        treatEvent("onLoad", path, fillStyle)
+        treatEvent("onLoad", path, fillStyle, strokeStyle)
     ctx.stroke(path);
 }
 
