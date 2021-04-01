@@ -683,7 +683,7 @@ function treatEvent(evt, path, fillStyle, strokeStyle) {
         ctx.lineWidth = 3;
     } else if (evt == "mouseOver") {
         clearMouse();
-        ctx.strokeStyle = "#003300";
+        ctx.strokeStyle = strokeStyle;
         ctx.lineWidth = 4;
         canvas.style.cursor = "pointer";
     }
